@@ -1,7 +1,6 @@
 {
   "name": "made-collections",
   "version": "1.0.0",
-  "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {

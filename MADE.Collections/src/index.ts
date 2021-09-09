@@ -47,3 +47,25 @@ export function removeRange<T>(destination: T[], itemsToRemove: T[]): T[] {
     itemsToRemove.forEach(item => destination.splice(destination.indexOf(item), 1));
     return destination;
 }
+
+/**
+ * Determines whether two arrays are equivalent, containing all the same items with no regard to order.
+ * @param {T[]} expected - The array of expected items.
+ * @param {T[]} actual - The array of actual items.
+ * @return {boolean} True if the arrays are equivalent; otherwise, false.
+ */
+export function areEquivalent<T>(expected: T[], actual: T[]): boolean {
+    var result = (expected == null && actual == null)
+        || (expected != null && actual != null &&
+            expected.length == actual.length);
+
+    if (result) {
+        expected.forEach(e => {
+            if (!actual.includes(e)) {
+                result = false;
+            }
+        });
+    }
+
+    return result;
+}

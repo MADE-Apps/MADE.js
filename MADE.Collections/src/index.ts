@@ -13,3 +13,13 @@ export function update<T>(array: T[], item: T, predicate: (item: T) => boolean):
     array[index] = item;
     return true;
 }
+
+/**
+ * Makes the given destination array items equal to the items in the given source array.
+ * @param {T[]} destination - The destination array to make equal to the source.
+ * @param {T[]} source - The source array to provide the items.
+ */
+export function makeEqualTo<T>(destination: T[], source: T[]) {
+    destination.length = 0;
+    source.forEach(item => destination.push(item));
+}

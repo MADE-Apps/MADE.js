@@ -69,3 +69,13 @@ export function areEquivalent<T>(expected: T[], actual: T[]): boolean {
 
     return result;
 }
+
+export function takeFromIndex<T>(array: T[], startIndex: number, count: number): T[] {
+    const result = new Array<T>();
+    for (let i = 0; i < count; i++) {
+        if (startIndex + i < array.length) {
+            result.push(array[startIndex + i]);
+        }
+    }
+    return result;
+}

@@ -1,4 +1,4 @@
-import { chunk } from "./index";
+import { chunk } from "../src/index";
 
 describe("when chunking items", () => {
     it("should chunk into size", () => {

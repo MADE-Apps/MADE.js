@@ -1,4 +1,4 @@
-import { areEquivalent } from "./index";
+import { areEquivalent } from "../src/index";
 
 describe("when determining if arrays are equivalent", () => {
     it("should return true if equivalent (in order)", () => {

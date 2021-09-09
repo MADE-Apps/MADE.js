@@ -1,4 +1,4 @@
-import { addRange } from "./index";
+import { addRange } from "../src/index";
 
 describe("when adding range of items", () => {
     it("should add range of items", () => {

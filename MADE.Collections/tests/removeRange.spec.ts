@@ -1,4 +1,4 @@
-import { removeRange } from "./index";
+import { removeRange } from "../src/index";
 
 describe("when removing range of items", () => {
     it("should remove range of items", () => {

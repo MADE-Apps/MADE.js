@@ -70,12 +70,33 @@ export function areEquivalent<T>(expected: T[], actual: T[]): boolean {
     return result;
 }
 
+/**
+ * Takes a number of elements from the specified array from the specified starting index.
+ * @param {T[]} array - The array of of items to take from.
+ * @param {number} startIndex - The index to start at in the array.
+ * @param {number} count - The number of items to take from the starting index.
+ * @return {T[]} An array subset of the specified array.
+ */
 export function takeFromIndex<T>(array: T[], startIndex: number, count: number): T[] {
     const result = new Array<T>();
     for (let i = 0; i < count; i++) {
         if (startIndex + i < array.length) {
             result.push(array[startIndex + i]);
         }
+    }
+    return result;
+}
+
+/**
+ * Chunks an array of items into an array of arrays grouped into the specified chunk size.
+ * @param {T[]} array - The array of of items to chunk.
+ * @param {number} size - The size of the chunks.
+ * @return {T[][]} An array of arrays containing the chunked items.
+ */
+export function chunk<T>(array: T[], size: number): T[][] {
+    var result = new Array<Array<T>>();
+    for (let i = 0, j = array.length; i < j; i += size) {
+        result.push(array.slice(i, i + size));
     }
     return result;
 }

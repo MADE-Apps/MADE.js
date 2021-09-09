@@ -23,3 +23,12 @@ export function makeEqualTo<T>(destination: T[], source: T[]) {
     destination.length = 0;
     source.forEach(item => destination.push(item));
 }
+
+/**
+ * Adds an array of items to another.
+ * @param {T[]} destination - The destination array to add items from the source to.
+ * @param {T[]} source - The source array items to add.
+ */
+export function addRange<T>(destination: T[], source: T[]) {
+    source.forEach(item => destination.push(item));
+}

@@ -1,3 +1,8 @@
+/**
+ * Converts a string value to a number value.
+ * @param {string} value - The string value to convert.
+ * @return {number} The converted value as a number.
+ */
 export function toNumber(value: string): number {
     if (isNullOrWhiteSpace(value)) {
         return 0;
@@ -8,6 +13,11 @@ export function toNumber(value: string): number {
         : 0;
 }
 
+/**
+ * Converts a string value to a boolean value.
+ * @param {string} value - The string value to convert.
+ * @return {boolean} The converted value as a boolean.
+ */
 export function toBoolean(value: string): boolean {
     if (isNullOrWhiteSpace(value)) {
         return false;

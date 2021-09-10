@@ -13,6 +13,11 @@ export function toCurrentAge(startingDate: Date): number {
     return yearDiff;
 }
 
+/**
+ * Rounds the date value to its nearest hour determined by the half hour of each hour.
+ * @param {Date} date - The date to round to the nearest hour.
+ * @return {Date} The date rounded to the nearest whole hour.
+ */
 export function toNearestHour(date: Date): Date {
     var hour = date.getMinutes() < 30
         ? date.getHours()
@@ -21,4 +26,13 @@ export function toNearestHour(date: Date): Date {
     return hour == 24
         ? new Date(date.setHours(0, 0, 0, 0))
         : new Date(date.setHours(hour, 0, 0, 0));
+}
+
+/**
+ * Gets the start of the day represented by the specified date.
+ * @param {Date} date - The date.
+ * @return {Date} A new date with the same date with the time set to midnight.
+ */
+export function startOfDay(date: Date): Date {
+    return new Date(date.setHours(0, 0, 0, 0));
 }

@@ -1,0 +1,44 @@
+{
+  "name": "made-data-validation",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "jest && tsc",
+    "test": "jest"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MADE-Apps/MADE.js.git"
+  },
+  "keywords": [
+    "Data",
+    "Value",
+    "Converter"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MADE-Apps/MADE.js/issues"
+  },
+  "homepage": "https://github.com/MADE-Apps/MADE.js#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  }
+}

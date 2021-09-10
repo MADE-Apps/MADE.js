@@ -36,3 +36,12 @@ export function toNearestHour(date: Date): Date {
 export function startOfDay(date: Date): Date {
     return new Date(date.setHours(0, 0, 0, 0));
 }
+
+/**
+ * Gets the end of the day represented by the specified date.
+ * @param {Date} date - The date.
+ * @return {Date} A new date with the same date with the time set to just before midnight of the next day.
+ */
+export function endOfDay(date: Date): Date {
+    return new Date(date.setHours(23, 59, 59, 999));
+}

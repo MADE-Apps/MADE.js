@@ -45,3 +45,16 @@ export function startOfDay(date: Date): Date {
 export function endOfDay(date: Date): Date {
     return new Date(date.setHours(23, 59, 59, 999));
 }
+
+/**
+ * Sets the time value of a date.
+ * @param {Date} date - The date value to set the time of.
+ * @param {number} hours - The hours to set.
+ * @param {number} minutes - The minutes to set.
+ * @param {number} seconds - The seconds to set.
+ * @param {number} milliseconds - The milliseconds to set.
+ * @return {Date} A new date with the time set.
+ */
+export function setTime(date: Date, hours: number, minutes: number, seconds: number, milliseconds: number): Date {
+    return new Date(date.setHours(hours, minutes, seconds, milliseconds));
+}

@@ -1,4 +1,4 @@
-import { toRadians } from '../src'
+import { toRadians } from '../../src'
 
 describe("when converting to radians", () => {
     it("should convert to radians (0, 0)", () => {

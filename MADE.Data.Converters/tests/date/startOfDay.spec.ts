@@ -1,4 +1,4 @@
-import { startOfDay } from '../src'
+import { startOfDay } from '../../src'
 
 describe("when getting start of day", () => {
     it("should return date at midnight", () => {

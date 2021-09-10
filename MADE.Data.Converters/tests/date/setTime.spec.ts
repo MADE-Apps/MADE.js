@@ -1,4 +1,4 @@
-import { setTime } from '../src'
+import { setTime } from '../../src'
 
 describe("when setting the time of a date", () => {
     it("should set date", () => {

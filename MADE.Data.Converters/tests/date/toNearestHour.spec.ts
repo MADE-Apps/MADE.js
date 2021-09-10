@@ -1,4 +1,4 @@
-import { toNearestHour } from '../src'
+import { toNearestHour } from '../../src'
 
 describe("when converting date to nearest hour", () => {
     it("should round up if after half hour", () => {

@@ -1,4 +1,4 @@
-import { toCurrentAge } from '../src'
+import { toCurrentAge } from '../../src'
 
 describe("when converting date to current age", () => {
     it("should return correct age (18 years ago today)", () => {

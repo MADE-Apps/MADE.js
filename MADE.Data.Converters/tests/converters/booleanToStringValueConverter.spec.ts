@@ -1,4 +1,4 @@
-import BooleanToStringValueConverter from '../src/converters/BooleanToStringValueConverter'
+import BooleanToStringValueConverter from '../../src/converters/BooleanToStringValueConverter'
 
 describe("when converting from boolean to string", () => {
     it("should convert true to default string (Yes)", () => {

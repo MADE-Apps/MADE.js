@@ -5,7 +5,7 @@
  * @param {Date} to - The upper bound of the date range.
  * @return {boolean} True if the date is in the range; otherwise, false.
  */
-export function isInRange(date: Date, from: Date, to: Date): boolean {
+export function isDateInRange(date: Date, from: Date, to: Date): boolean {
     return date >= from && date <= to;
 }
 

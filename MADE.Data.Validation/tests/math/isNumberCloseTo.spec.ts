@@ -1,4 +1,4 @@
-import { isCloseTo } from '../../src'
+import { isNumberCloseTo } from '../../src'
 
 describe("when determining if a number is close to another", () => {
     it("should be true if numbers are close", () => {
@@ -7,7 +7,7 @@ describe("when determining if a number is close to another", () => {
         const b = 0.0000000500000001;
 
         // Act
-        const result = isCloseTo(a, b)
+        const result = isNumberCloseTo(a, b)
 
         // Assert
         expect(result).toBe(true)
@@ -19,7 +19,7 @@ describe("when determining if a number is close to another", () => {
         const b = 0.000000051;
 
         // Act
-        const result = isCloseTo(a, b)
+        const result = isNumberCloseTo(a, b)
 
         // Assert
         expect(result).toBe(false)

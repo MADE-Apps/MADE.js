@@ -1,4 +1,4 @@
-import { isInRange } from '../../src'
+import { isDateInRange } from '../../src'
 
 describe("when determining if a date is in a valid range", () => {
     it("should be true if in range", () => {
@@ -8,7 +8,7 @@ describe("when determining if a date is in a valid range", () => {
         const to = new Date('12/31/2021')
 
         // Act
-        const result = isInRange(date, from, to)
+        const result = isDateInRange(date, from, to)
 
         // Assert
         expect(result).toBe(true)
@@ -21,7 +21,7 @@ describe("when determining if a date is in a valid range", () => {
         const to = new Date('12/31/2020')
 
         // Act
-        const result = isInRange(date, from, to)
+        const result = isDateInRange(date, from, to)
 
         // Assert
         expect(result).toBe(false)

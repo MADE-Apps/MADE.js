@@ -63,7 +63,7 @@ jobs:
 
       - name: Publish
         if: startsWith(github.ref, 'refs/heads/release')
-        working-directory: ./dist
+        working-directory: MADE.Runtime/dist
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

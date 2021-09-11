@@ -4,10 +4,9 @@
   "main": "./index.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
     "build": "npm test && tsc",
     "dist": "copy /Y package.json dist && copy /Y README.md dist",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "files": [
     "*"

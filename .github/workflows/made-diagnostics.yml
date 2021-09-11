@@ -53,7 +53,19 @@ jobs:
         run: npm version $BUILD_VERSION
 
       - name: Build
-        run: npm run dist
+        run: npm run build
+
+      - name: Copy package.json to dist
+        uses: canastro/copy-file-action@master
+        with:
+          source: "package.json"
+          target: "./dist/package.json"
+
+      - name: Copy README.md to dist
+        uses: canastro/copy-file-action@master
+        with:
+          source: "README.md"
+          target: "./dist/README.md"
 
       - name: Publish
         if: startsWith(github.ref, 'refs/heads/release')

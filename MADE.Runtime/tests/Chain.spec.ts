@@ -1,10 +1,9 @@
 import Chain from '../src/Collections/Chain'
-import Guid from '../src/Guid';
 
 describe("when creating a Chain", () => {
     it("should initialize with instances", () => {
         // Arrange
-        const chain = new Chain(Guid.newGuid(), Guid.newGuid(), Guid.newGuid());
+        const chain = new Chain(1, 2, 3);
 
         // Act & Assert
         expect(chain.count()).toBe(3);
@@ -14,10 +13,10 @@ describe("when creating a Chain", () => {
 describe("when chaining instances in a Chain", () => {
     it("should add instances to the chain", () => {
         // Arrange
-        const chain = new Chain(Guid.newGuid(), Guid.newGuid(), Guid.newGuid());
+        const chain = new Chain(1, 2, 3);
 
         // Act
-        chain.with(Guid.newGuid(), Guid.newGuid(), Guid.newGuid());
+        chain.with(4, 5, 6);
 
         // Assert
         expect(chain.count()).toBe(6);
@@ -27,7 +26,7 @@ describe("when chaining instances in a Chain", () => {
 describe("when invoking an action on a Chain", () => {
     it("should invoke the action on each instance", () => {
         // Arrange
-        const chain = new Chain(Guid.newGuid(), Guid.newGuid(), Guid.newGuid());
+        const chain = new Chain(1, 2, 3);
         const action = jest.fn();
 
         // Act

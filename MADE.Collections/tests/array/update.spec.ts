@@ -1,4 +1,4 @@
-import { update } from "../src/index";
+import { update } from "../../src";
 
 describe("when updating an array", () => {
     it("should return true if item updated", () => {

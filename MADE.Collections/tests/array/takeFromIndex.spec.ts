@@ -1,4 +1,4 @@
-import { takeFromIndex } from "../src/index";
+import { takeFromIndex } from "../../src";
 
 describe("when taking items from index with count", () => {
     it("should return subset of items", () => {

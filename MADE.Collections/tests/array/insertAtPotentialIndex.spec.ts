@@ -1,4 +1,4 @@
-import { potentialIndexOf } from "../src/index";
+import { potentialIndexOf } from "../../src";
 
 describe("when determining the potential index of an item in an array", () => {
     it("should return correct index based on predicate", () => {

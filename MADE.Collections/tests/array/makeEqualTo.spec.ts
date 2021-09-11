@@ -1,4 +1,4 @@
-import { makeEqualTo } from "../src/index";
+import { makeEqualTo } from "../../src";
 
 describe("when making an array equal to another", () => {
     it("should update array to be equal to other", () => {

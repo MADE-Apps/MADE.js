@@ -26,6 +26,15 @@ export function toBoolean(value: string): boolean {
     return value === 'true' || value === '1' || value === 'on' || value === 'checked' || value === 'selected' || value === 'yes';
 };
 
+/**
+ * Reverses a string value.
+ * @param {string} value - The string value to reverse.
+ * @return {string} The reversed string value.
+ */
+export function reverseString(value: string): string {
+    return value.split('').reverse().join('');
+}
+
 function isNullOrWhiteSpace(value: string): boolean {
     return value === null || value.match(/^ *$/) !== null;
 }

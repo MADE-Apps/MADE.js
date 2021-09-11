@@ -1,15 +1,16 @@
 {
   "name": "made-runtime",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "jest && tsc",
+    "build": "npm test && tsc",
+    "dist": "copy /Y package.json dist && copy /Y README.md dist",
     "test": "jest"
   },
   "files": [
-    "dist/*"
+    "*"
   ],
   "jest": {
     "transform": {
@@ -26,9 +27,9 @@
     "url": "git+https://github.com/MADE-Apps/MADE.js.git"
   },
   "keywords": [
-    "Data",
-    "Value",
-    "Converter"
+    "Runtime",
+    "Guid",
+    "Equatable"
   ],
   "license": "MIT",
   "bugs": {

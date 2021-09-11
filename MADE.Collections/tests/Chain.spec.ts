@@ -1,4 +1,4 @@
-import Chain from '../src/Collections/Chain'
+import Chain from '../src/Chain'
 
 describe("when creating a Chain", () => {
     it("should initialize with instances", () => {

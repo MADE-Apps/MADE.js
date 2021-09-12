@@ -9,3 +9,4 @@ This package includes:
 - JsonPatchRequest for making a PATCH request to a JSON endpoint.
 - NetworkResponse for detailing a response from a network request including content and status code.
 - NetworkRequestManager for processing a network request queue with success and error callbacks.
+- NetworkRequestQuery for handling the query parts of a URI or network request.

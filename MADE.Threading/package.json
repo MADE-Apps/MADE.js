@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm test && tsc",
     "dist": "copy /Y package.json dist && copy /Y README.md dist",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --collectCoverage"
   },
   "files": [
     "*"

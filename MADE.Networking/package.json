@@ -1,0 +1,47 @@
+{
+  "name": "made-networking",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "build": "npm test && tsc",
+    "dist": "copy /Y package.json dist && copy /Y README.md dist",
+    "test": "jest --passWithNoTests"
+  },
+  "files": [
+    "*"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MADE-Apps/MADE.js.git"
+  },
+  "keywords": [
+    "Networking"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MADE-Apps/MADE.js/issues"
+  },
+  "homepage": "https://github.com/MADE-Apps/MADE.js#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "made-runtime": "^0.1.0-alpha.7",
+    "made-threading": "^0.1.0-alpha.7"
+  }
+}

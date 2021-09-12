@@ -1,0 +1,69 @@
+name: made-networking
+
+on:
+  create:
+    branches:
+      - release/**
+  push:
+    branches:
+    - main
+    paths:
+    - MADE.Networking/**
+    - build/**
+    - .github/workflows/made-networking.yml
+  pull_request:
+    branches:
+    - main
+    paths:
+    - MADE.Networking/**
+    - build/**
+    - .github/workflows/made-networking.yml
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: MADE.Networking
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get source
+        uses: actions/checkout@v2
+
+      - name: Get Build Version
+        run: |
+          Import-Module ..\build\GetBuildVersion.psm1
+          $version = GetBuildVersion -VersionString $Env:GITHUB_REF
+          echo "BUILD_VERSION=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+          Write-Host $version
+        shell: pwsh
+      
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Restore dependencies
+        run: npm install
+
+      - name: Update Version
+        run: npm version $BUILD_VERSION
+
+      - name: Build
+        run: npm run build
+
+      - name: Copy package.json to dist
+        run: cp "package.json" "./dist/package.json"
+
+      - name: Copy README.md to dist
+        run: cp "README.md" "./dist/README.md"
+
+      - name: Publish
+        if: startsWith(github.ref, 'refs/heads/release')
+        working-directory: MADE.Networking/dist
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

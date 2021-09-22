@@ -1,4 +1,4 @@
-import Timer from '../src/Timer'
+import { Timer } from '../src/Timer'
 
 describe("when running a timer continuously", () => {
     it("should call callback on interval", async () => {

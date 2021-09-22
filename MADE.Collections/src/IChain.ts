@@ -1,7 +1,7 @@
 /**
  * Defines an interface for a chain of objects.
  */
-export default interface IChain<T> {
+export interface IChain<T> {
     /**
      * Gets the count of instances within the chain.
      * @returns The count of instances within the chain.

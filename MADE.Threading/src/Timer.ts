@@ -1,9 +1,9 @@
-import ITimer from "./ITimer";
+import { ITimer } from "./ITimer";
 
 /**
  * Defines a timer to use for performing actions on an interval.
  */
-export default class Timer implements ITimer {
+export class Timer implements ITimer {
     interval: number;
     tick: Function;
     private _isContinuous: boolean;

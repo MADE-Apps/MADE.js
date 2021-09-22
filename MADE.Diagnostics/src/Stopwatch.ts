@@ -3,7 +3,7 @@ import { performance } from 'perf_hooks';
 /**
  * Defines a mechanism for measuring elapsed time.
  */
-export default class Stopwatch {
+export class Stopwatch {
     private startTime: number = 0;
     private endTime: number = 0;
 

@@ -1,9 +1,9 @@
-import IChain from "./IChain";
+import { IChain } from "./IChain";
 
 /**
  * Defines a chain for instances of objects.
  */
-export default class Chain<T> implements IChain<T> {
+export class Chain<T> implements IChain<T> {
     private _instances: T[] = [];
 
     constructor(...instances: T[]) {

@@ -1,4 +1,4 @@
-import Guid from '../src/Guid'
+import { Guid } from '../src/Guid'
 
 describe("when creating a Guid", () => {
     it("should create a new Guid", () => {
@@ -7,7 +7,7 @@ describe("when creating a Guid", () => {
 
         // Assert
         expect(guid).toBeDefined();
-        expect(guid).not.toBe(Guid.empty);        
+        expect(guid).not.toBe(Guid.empty);
     });
 
     it("should create a Guid from a string", () => {
@@ -19,7 +19,7 @@ describe("when creating a Guid", () => {
 
         // Assert
         expect(guid).toBeDefined();
-        expect(guid).not.toBe(Guid.empty);        
+        expect(guid).not.toBe(Guid.empty);
     });
 });
 

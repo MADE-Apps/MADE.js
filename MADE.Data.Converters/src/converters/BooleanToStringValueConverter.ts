@@ -1,6 +1,6 @@
 import { IValueConverter } from "./IValueConverter";
 
-export default class BooleanToStringValueConverter implements IValueConverter<boolean, string> {
+export class BooleanToStringValueConverter implements IValueConverter<boolean, string> {
     trueValue: string;
     falseValue: string;
 

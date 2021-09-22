@@ -1,7 +1,7 @@
 /**
  * Defines an interface for a timer to use for performing actions on an interval.
  */
-export default interface ITimer {
+export interface ITimer {
     /**
      * The interval between initiating the tick function.
      */

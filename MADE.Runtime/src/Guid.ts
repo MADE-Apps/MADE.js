@@ -1,9 +1,9 @@
-import IEquatable from "./IEquatable";
+import { IEquatable } from "./IEquatable";
 
 /**
  * Defines a globally unique identifier (GUID).
  */
-export default class Guid implements IEquatable<Guid> {
+export class Guid implements IEquatable<Guid> {
 
   private _guid: string;
 
@@ -65,7 +65,7 @@ export default class Guid implements IEquatable<Guid> {
   }
 
   private isValid(guid: string): boolean {
-    
+
     var guidRegex: RegExp = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     return guidRegex.test(guid);
   }

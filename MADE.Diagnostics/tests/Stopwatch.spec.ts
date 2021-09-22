@@ -1,4 +1,4 @@
-import Stopwatch from '../src/Stopwatch'
+import { Stopwatch } from '../src/Stopwatch'
 import { delay } from '../src'
 
 describe("when running a stopwatch", () => {

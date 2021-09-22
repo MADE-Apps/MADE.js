@@ -1,14 +1,13 @@
-import ITimer from "made-threading/ITimer";
-import Timer from "made-threading/Timer";
-import INetworkRequestManager from "./INetworkRequestManager";
-import INetworkRequest from "./Requests/INetworkRequest";
-import NetworkRequestCallback from "./Requests/NetworkRequestCallback";
-import NetworkResponse from "./Responses/NetworkResponse";
+import { ITimer, Timer } from "made-threading";
+import { INetworkRequestManager } from "./INetworkRequestManager";
+import { INetworkRequest } from "./Requests/INetworkRequest";
+import { NetworkRequestCallback } from "./Requests/NetworkRequestCallback";
+import { NetworkResponse } from "./Responses/NetworkResponse";
 
 /**
  * Defines a manager for executing queued network requests.
  */
-export default class NetworkRequestManager implements INetworkRequestManager {
+export class NetworkRequestManager implements INetworkRequestManager {
     currentQueue: NetworkRequestCallback[];
     private _timer: ITimer;
     private _isProcessingRequests: boolean = false;

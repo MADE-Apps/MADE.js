@@ -1,11 +1,11 @@
-import INetworkRequest from "./Requests/INetworkRequest";
-import NetworkRequestCallback from "./Requests/NetworkRequestCallback";
-import NetworkResponse from "./Responses/NetworkResponse";
+import { INetworkRequest } from "./Requests/INetworkRequest";
+import { NetworkRequestCallback } from "./Requests/NetworkRequestCallback";
+import { NetworkResponse } from "./Responses/NetworkResponse";
 
 /**
  * Defines an interface for a network request manager.
  */
-export default interface INetworkRequestManager {
+export interface INetworkRequestManager {
     /**
      * The current queue of network requests.
      */

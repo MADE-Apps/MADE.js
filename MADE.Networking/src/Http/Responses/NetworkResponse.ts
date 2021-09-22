@@ -1,7 +1,7 @@
 /**
  * Defines a response message that includes the status and response content.
  */
-export default class NetworkResponse<T> {
+export class NetworkResponse<T> {
     /**
      * The status code of the response.
      */

@@ -1,12 +1,12 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
-import Guid from "made-runtime/Guid";
-import NetworkResponse from "../../Responses/NetworkResponse";
-import INetworkRequest from "../INetworkRequest";
+import { Guid } from "made-runtime";
+import { NetworkResponse } from "../../Responses/NetworkResponse";
+import { INetworkRequest } from "../INetworkRequest";
 
 /**
  * Defines a JSON network request for a POST endpoint.
  */
-export default class JsonPostRequest implements INetworkRequest {
+export class JsonPostRequest implements INetworkRequest {
     identifier: Guid;
     url: string;
     headers: any;

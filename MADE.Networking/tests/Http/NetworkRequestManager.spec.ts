@@ -1,6 +1,6 @@
 import axios from 'axios';
-import NetworkRequestManager from '../../src/Http/NetworkRequestManager';
-import JsonGetRequest from '../../src/Http/Requests/Json/JsonGetRequest';
+import { NetworkRequestManager } from '../../src/Http/NetworkRequestManager';
+import { JsonGetRequest } from '../../src/Http/Requests/Json/JsonGetRequest';
 
 describe("when processing network manager requests", () => {
     it("should process added requests", async () => {

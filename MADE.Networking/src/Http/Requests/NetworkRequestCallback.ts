@@ -1,10 +1,10 @@
-import NetworkResponse from "../Responses/NetworkResponse";
-import INetworkRequest from "./INetworkRequest";
+import { NetworkResponse } from "../Responses/NetworkResponse";
+import { INetworkRequest } from "./INetworkRequest";
 
 /**
  * Defines a model for a callback from a network request.
  */
-export default class NetworkRequestCallback {
+export class NetworkRequestCallback {
     /**
      * The network request.
      */

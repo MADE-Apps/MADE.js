@@ -1,7 +1,7 @@
 /**
  * Defines a model for a network request query.
  */
-export default class NetworkRequestQuery {
+export class NetworkRequestQuery {
     private _queryParts: Array<[string, any]>;
 
     constructor(...params: Array<[string, any]>) {

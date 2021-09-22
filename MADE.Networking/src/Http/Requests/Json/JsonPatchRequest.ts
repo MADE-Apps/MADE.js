@@ -1,12 +1,12 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
-import Guid from "made-runtime/Guid";
-import NetworkResponse from "../../Responses/NetworkResponse";
-import INetworkRequest from "../INetworkRequest";
+import { Guid } from "made-runtime";
+import { NetworkResponse } from "../../Responses/NetworkResponse";
+import { INetworkRequest } from "../INetworkRequest";
 
 /**
  * Defines a JSON network request for a PATCH endpoint.
  */
-export default class JsonPatchRequest implements INetworkRequest {
+export class JsonPatchRequest implements INetworkRequest {
     identifier: Guid;
     url: string;
     headers: any;

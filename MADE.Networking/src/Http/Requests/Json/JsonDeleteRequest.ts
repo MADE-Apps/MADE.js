@@ -1,12 +1,12 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
-import Guid from "made-runtime/Guid";
-import NetworkResponse from "../../Responses/NetworkResponse";
-import INetworkRequest from "../INetworkRequest";
+import { Guid } from "made-runtime";
+import { NetworkResponse } from "../../Responses/NetworkResponse";
+import { INetworkRequest } from "../INetworkRequest";
 
 /**
  * Defines a JSON network request for a DELETE endpoint.
  */
-export default class JsonDeleteRequest implements INetworkRequest {
+export class JsonDeleteRequest implements INetworkRequest {
     identifier: Guid;
     url: string;
     headers: any;

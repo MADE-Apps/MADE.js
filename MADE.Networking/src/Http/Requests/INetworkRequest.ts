@@ -1,11 +1,10 @@
-import Guid from "made-runtime/Guid";
-import IEquatable from "made-runtime/IEquatable";
-import NetworkResponse from "../Responses/NetworkResponse";
+import { Guid, IEquatable } from "made-runtime";
+import { NetworkResponse } from "../Responses/NetworkResponse";
 
 /**
  * Defines an interface for network requests.
  */
-export default interface INetworkRequest extends IEquatable<INetworkRequest> {
+export interface INetworkRequest extends IEquatable<INetworkRequest> {
     /**
      * The unique identifier for this request.
      */

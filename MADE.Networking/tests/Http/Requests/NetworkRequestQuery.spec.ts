@@ -1,4 +1,4 @@
-import NetworkRequestQuery from '../../../src/Http/Requests/NetworkRequestQuery';
+import { NetworkRequestQuery } from '../../../src/Http/Requests/NetworkRequestQuery';
 
 describe("when creating a network request query", () => {
     it("should create from URI string", () => {

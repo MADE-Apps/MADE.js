@@ -50,7 +50,7 @@ jobs:
         run: npm install
 
       - name: Update Version
-        run: npm version $BUILD_VERSION
+        run: npm version $BUILD_VERSION --no-git-tag-version --allow-same-version
 
       - name: Build
         run: npm run build

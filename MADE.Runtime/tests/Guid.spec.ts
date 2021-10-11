@@ -7,7 +7,7 @@ describe("when creating a Guid", () => {
 
         // Assert
         expect(guid).toBeDefined();
-        expect(guid).not.toBe(Guid.empty);
+        expect(guid).not.toBe(Guid.empty());
     });
 
     it("should create a Guid from a string", () => {
@@ -19,7 +19,28 @@ describe("when creating a Guid", () => {
 
         // Assert
         expect(guid).toBeDefined();
-        expect(guid).not.toBe(Guid.empty);
+        expect(guid).not.toBe(Guid.empty());
+    });
+
+    it("should throw Error if Guid is not valid", () => {
+        // Arrange
+        var guidStr = "abcdefgh-1234-ijkl-5678-mnopqrstuvwx";
+
+        // Act & Assert
+        expect(() => {
+            new Guid(guidStr);
+        }).toThrowError("The format of the Guid is invalid.");
+    });
+});
+
+describe("when retrieving an empty Guid", () => {
+    it("should return a Guid with 0 values", () => {
+        // Arrange & Act
+        var guid = Guid.empty();
+
+        // Assert
+        expect(guid).toBeDefined();
+        expect(guid.toString()).toBe("00000000-0000-0000-0000-000000000000");
     });
 });
 

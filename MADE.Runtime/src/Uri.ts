@@ -72,6 +72,10 @@ export class Uri implements IEquatable<Uri> {
      */
     public segments: string[];
 
+    /**
+     * Initializes a new instance of the Uri class using a URI value represented by a string.
+     * @param {string} uri - A string that contains a valid URI.
+     */
     constructor(uri: string) {
         this._uri = uri;
         this.absolutePath = this._uri.substring(0, this._uri.indexOf("?") > 0 ? this._uri.indexOf("?") : this._uri.length);
@@ -87,6 +91,11 @@ export class Uri implements IEquatable<Uri> {
         this.segments = this.absolutePath.replace(`${this.scheme}:`, "").split("/").filter((value: string) => value !== "");
     }
 
+    /**
+     * Retrieves a query part from the URI based on the specified key.
+     * @param {string} key - The key of the query part to retrieve.
+     * @returns {string} A string that contains the value of the query part.
+     */
     getQueryValue(key: string): string {
         let queryParts: { [key: string]: string } = this.queryParts;
         return queryParts[key];

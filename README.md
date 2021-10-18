@@ -27,6 +27,7 @@ As many developers know, projects like MADE.js are built and maintained in spare
 | Networking | [![made-networking](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-networking.yml/badge.svg)](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-networking.yml) | [![npm](https://img.shields.io/npm/v/made-networking)](https://www.npmjs.com/package/made-networking) | ![npm](https://img.shields.io/npm/dt/made-networking) |
 | Runtime | [![made-runtime](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-runtime.yml/badge.svg)](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-runtime.yml) | [![npm](https://img.shields.io/npm/v/made-runtime)](https://www.npmjs.com/package/made-runtime) | ![npm](https://img.shields.io/npm/dt/made-runtime) |
 | Threading | [![made-threading](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-threading.yml/badge.svg)](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-threading.yml) | [![npm](https://img.shields.io/npm/v/made-threading)](https://www.npmjs.com/package/made-threading) | ![npm](https://img.shields.io/npm/dt/made-threading) |
+| UI.Styling | [![made-ui-styling](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-ui-styling.yml/badge.svg)](https://github.com/MADE-Apps/MADE.js/actions/workflows/made-ui-styling.yml) | [![npm](https://img.shields.io/npm/v/made-ui-styling)](https://www.npmjs.com/package/made-ui-styling) | ![npm](https://img.shields.io/npm/dt/made-ui-styling) |
 
 ## Contributing 🚀
 

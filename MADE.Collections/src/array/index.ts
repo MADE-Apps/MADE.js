@@ -1,3 +1,4 @@
+
 /**
  * Updates an item within the array, if the item exists.
  * @param {T[]} array - The array to update the item in.
@@ -27,6 +28,16 @@ export function remove<T>(array: T[], predicate: (item: T) => boolean): boolean 
     }
     array.splice(index, 1);
     return true;
+}
+
+/**
+ * Determines whether an item exists in the array based on the predicate.
+ * @param {T[]} array - The array to check whether an item exists.
+ * @param {(item: T) => boolean} predicate - The function to find the item within the array.
+ * @return {boolean} True if the item exists; otherwise, false.
+ */
+export function contains<T>(array: T[], predicate: (item: T) => boolean): boolean {
+    return array.findIndex(predicate) !== -1;
 }
 
 /**

@@ -8,7 +8,7 @@ export class ContainsValidator implements IValidator {
     options: any[];
 
     constructor(options: any[]) {
-        this.key = "BetweenValidator";
+        this.key = "ContainsValidator";
         this.isInvalid = false;
         this.isDirty = false;
         this.feedbackMessage = `The value is not a valid option.`;

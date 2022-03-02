@@ -1,0 +1,22 @@
+{
+  "name": "MADE.js",
+  "version": "0.0.1",
+  "description": "MADE.js is a toolkit of easy-to-use extensions, helpers, and UI components to make app development easier for web developers.",
+  "main": "index.js",
+  "authors": {
+    "name": "MADE Apps",
+    "email": "me@jamescroft.co.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MADE-Apps/MADE.js.git"
+  },
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}

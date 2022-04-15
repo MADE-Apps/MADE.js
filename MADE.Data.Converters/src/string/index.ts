@@ -1,4 +1,19 @@
 /**
+ * Truncates a string value to the specified length with an ellipsis.
+ * @param {string} value - The value to truncate.
+ * @param {number} maxLength - The maximum length of the value.
+ * @return {string} A truncated string with ellipsis if the value's length is greater than the max length.
+ */
+export function truncate(value: string, maxLength: number): string {
+    if (isNullOrWhiteSpace(value) || value.length <= maxLength) {
+        return value;
+    }
+
+    const suffix = "...";
+    return value.substring(0, maxLength - suffix.length) + suffix;
+}
+
+/**
  * Converts a string value to a number value.
  * @param {string} value - The string value to convert.
  * @return {number} The converted value as a number.

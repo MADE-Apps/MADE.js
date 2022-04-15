@@ -14,6 +14,29 @@ export function toCurrentAge(startingDate: Date): number {
 }
 
 /**
+ * Gets the day suffix for the specified date, i.e. st, nd, rd, or th.
+ * @param {Date} date - The date to get a day suffix for.
+ * @return {string} The day suffix as a string.
+ */
+export function toDaySuffix(date: Date): string {
+    const day = date.getDate();
+    switch (day) {
+        case 1:
+        case 21:
+        case 31:
+            return "st";
+        case 2:
+        case 22:
+            return "nd";
+        case 3:
+        case 23:
+            return "rd";
+        default:
+            return "th";
+    }
+}
+
+/**
  * Rounds the date value to its nearest hour determined by the half hour of each hour.
  * @param {Date} date - The date to round to the nearest hour.
  * @return {Date} The date rounded to the nearest whole hour.

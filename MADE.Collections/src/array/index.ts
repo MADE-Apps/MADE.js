@@ -124,7 +124,7 @@ export function potentialIndexOf<T>(array: T[], value: T, predicate: (value: T, 
 }
 
 /**
- *Inserts an item to the specified array at the potential index determined by the predicate.
+ * Inserts an item to the specified array at the potential index determined by the predicate.
  * @param {T[]} array - The array of items the item should be inserted into.
  * @param {T} value - The object to insert into the array.
  * @param {(value: T, item: T) => boolean} predicate - The function to determine the position of the item based on the provided value.
@@ -136,4 +136,18 @@ export function insertAtPotentialIndex<T>(array: T[], value: T, predicate: (valu
         array.splice(potentialIndex, 0, value);
     }
     return potentialIndex;
+}
+
+/**
+ * Creates a new array from the specified and shuffles the elements randomly.
+ * @param {T[]} array - The array of items to shuffle.
+ * @return {T[]} The new shuffled array of items.
+ */
+export function shuffle<T>(array: T[]): T[] {
+    const result = array.slice();
+    for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
 }

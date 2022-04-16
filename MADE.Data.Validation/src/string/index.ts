@@ -20,3 +20,26 @@ export function containsString(phrase: string, value: string, ignoreCase: boolea
     }
     return phrase.indexOf(value) !== -1;
 }
+
+/**
+ * Compares a string value against a wildcard pattern, similar to the Visual Basic like operator.
+ * @example isLike("abc", "a?c") // returns true
+ * @example isLike("abc", "cba*") // returns false
+ * @param {string} value - The value to compare is like.
+ * @param {string} likePattern - The wildcard like pattern to match on.
+ * @return {boolean} True if the value is like the pattern; otherwise, false.
+ */
+export function isLike(value: string, likePattern: string): boolean {
+    if (isNullOrWhiteSpace(value) || isNullOrWhiteSpace(likePattern)) {
+        return false;
+    }
+
+    // Replace wildcard characters with regular expression equivalents
+    var escapedPattern = likePattern.replaceAll('[!', '[^')
+        .replaceAll('?', '.')
+        .replaceAll('*', '.*')
+        .replaceAll('#', '\\d');
+
+    var regexPattern = '^' + escapedPattern + '$';
+    return new RegExp(regexPattern).test(value);
+}
